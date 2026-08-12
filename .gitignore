@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller / Build artifacts
+build/
+dist/
+*.spec
+*.exe
+
+# Caches and local environments
+.venv/
+venv/
+ENV/
+env/
+.idea/
+.vscode/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Sensitive / Credentials / Personal Info
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.pfx
+*.secret
+credentials.json
+token.json
+secrets.json
+auth.json
+.system_generated/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
