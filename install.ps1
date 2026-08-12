@@ -25,6 +25,12 @@ Copy-Item -Path "$BuildDir\*" -Destination $InstallDir -Recurse -Force
 
 $ExePath = "$InstallDir\AntigravityLauncher.exe"
 
+# Code Signing
+$SignScript = "$PSScriptRoot\sign_exe.ps1"
+if (Test-Path $SignScript) {
+    & $SignScript
+}
+
 # 2. Desktop Shortcut
 Write-Host "[3/4] 바탕화면 바로가기 생성 중..." -ForegroundColor Yellow
 $DesktopPath = [Environment]::GetFolderPath("Desktop")

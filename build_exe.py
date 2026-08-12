@@ -29,6 +29,12 @@ def build():
         print("\nBuild Successful!")
         dist_exe = os.path.join(base_dir, "dist", "AntigravityLauncher", "AntigravityLauncher.exe")
         print(f"Executable path: {dist_exe}")
+
+        # Automatically sign executable
+        sign_script = os.path.join(base_dir, "sign_exe.ps1")
+        if os.path.exists(sign_script):
+            print("\nApplying code signing signature...")
+            subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", sign_script], cwd=base_dir)
     else:
         print("\nBuild failed!")
 
